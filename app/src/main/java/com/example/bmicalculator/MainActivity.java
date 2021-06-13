@@ -3,9 +3,14 @@ package com.example.bmicalculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -83,9 +88,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     tvOutput.setText("");
                     tvCategory.setText("");
                     tvRisk.setText("");
+                    tvOutput.setBackgroundResource(R.color.white);
                 }
 
         }
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate (R.menu.menu, menu);
+
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+
+            case R.id.aboutpage :
+                Intent intent = new Intent(this, AboutActivity.class);
+                startActivity(intent);
+                break;
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void Category() {
@@ -93,26 +119,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (bmi <= 18.4){
             category = "Underweight";
             risk = "Malnutrition risk";
+            tvOutput.setBackgroundColor(Color.YELLOW);
         }
         else if (bmi >= 18.5 && bmi <= 24.9){
             category = "Normal Weight";
             risk = "Low risk";
+            tvOutput.setBackgroundColor(Color.GREEN);
         }
         else if (bmi >= 25.0 && bmi <= 29.9){
             category = "Overweight";
             risk = "Enchanced risk";
+            tvOutput.setBackgroundColor(Color.YELLOW);
         }
         else if (bmi >= 30.0 && bmi <= 34.9){
             category = "Moderately obese";
             risk = "Medium risk";
+            tvOutput.setBackgroundColor(Color.YELLOW);
         }
         else if (bmi >= 35.0 && bmi <= 39.9){
             category = "Severely obese";
             risk = "High risk";
+            tvOutput.setBackgroundColor(Color.RED);
         }
         else if (bmi >= 40.0){
             category = "Very severely obese";
             risk = "Very high risk";
+            tvOutput.setBackgroundColor(Color.RED);
         }
 
         tvCategory.setText(category);

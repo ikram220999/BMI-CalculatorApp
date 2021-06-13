@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">BMI CALCULATOR</string>
+    <string name="copyright">Copyright &#169; 2021 Ikram &amp; Fatihah</string>
+    <string name="about_text">This is a BMI Calculator Application to demonstrate to the user on how
+    they can calculate their BMI and health status after enter data of their height and weight</string>
+    <string name="developer">BMI Calculator Application created by Muhammad Ikram Bin Azhar (2020980817)
+        and Nurfatihah Nasrin binti Mohd Fardi (2020960815) in class RCS2405C and under programme code CS240</string>
 </resources>
