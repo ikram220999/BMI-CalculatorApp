@@ -5,4 +5,5 @@
     they can calculate their BMI and health status after enter data of their height and weight</string>
     <string name="developer">BMI Calculator Application created by Muhammad Ikram Bin Azhar (2020980817)
         and Nurfatihah Nasrin binti Mohd Fardi (2020960815) in class RCS2405C and under programme code CS240</string>
+    <string name="hyperlinka">Learn more about BMI Calculator App development\n<a href="https://github.com/ikram220999/BMI-CalculatorApp.git">BMICalculatorApp</a></string>
 </resources>
